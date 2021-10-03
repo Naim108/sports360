@@ -1,0 +1,10 @@
+.team-container{
+    margin:5px;
+    padding:10px
+}
+.cart{
+    margin: 15px;
+    border: 1px solid gray;
+    padding:10px;
+    height: 450px;
+}
