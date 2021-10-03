@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import {Link} from 'react-router-dom'
 import './AllTeams.css'
 
 const AllTeams = () => {
@@ -23,7 +24,7 @@ const AllTeams = () => {
             <h1>Our Teams</h1>
             <div>
                 <input onChange={handleSearch} className="p-2" type="text" placeholder="Enter your team name" />
-                <button className="btn btn-danger p-2 ">Search</button>
+                <button  className="btn btn-danger p-2 ">Search</button>
             </div>
             <div className="teams">
                 <div className="row">
@@ -38,7 +39,7 @@ const AllTeams = () => {
                                 <p>{team.strLeague}</p>
                                 <p>{team.strCountry}</p>
                                 <p>{team.strGender}</p>
-                                <button className="btn btn-success">Details</button>
+                                <Link to={`/details/${team.idTeam}`}><button className="btn btn-success">Details</button></Link>
                             </div>
                         </div>)
                     }
